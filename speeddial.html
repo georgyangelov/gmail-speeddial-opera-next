@@ -1,0 +1,63 @@
+<html>
+<head>
+	<style>
+		body {
+			display: -webkit-flex;
+			display: flex;
+			-webkit-align-items: center;
+			align-items: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+		}
+
+		#cont {
+			position: relative;
+		}
+
+		#logo {
+			width: 150px;
+		}
+
+		.no-unread #num_cont {
+			display: none;
+		}
+
+		#num_cont {
+			width: 40px;
+			height: 40px;
+
+			background: #edebdf;
+			border: 5px solid #e93e30;
+			border-radius: 30px;
+
+			position: absolute;
+			right: -10px;
+			bottom: 10px;
+		}
+
+		#num_cont #num {
+			position: absolute;
+			top: 2px;
+			left: 13px;
+
+			margin: 0;
+			padding: 0;
+
+			font-size: 30px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="cont" class="no-unread">
+		<img id="logo" src="gmail-icon.png" />
+
+		<div id="num_cont">
+			<h3 id="num">0</h3>
+		</div>
+	</div>
+
+	<script src="zepto.min.js"></script>
+	<script src="gmail.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "version": "0.1",
+  "name": "Speed Dial for GMail",
+  "developer": "George Angelov",
+
+  "permissions": ["speeddial", "https://mail.google.com/"],
+  "background": {"page": "speeddial.html"},
+  "speeddial": {
+    "title": "GMail",
+    "url": "https://mail.google.com"
+    }
+}
