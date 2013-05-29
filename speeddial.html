@@ -8,6 +8,10 @@
 			align-items: center;
 			-webkit-justify-content: center;
 			justify-content: center;
+
+			background: -webkit-radial-gradient(center, ellipse cover,  #ff3019 0%,#cf0404 100%);
+
+
 		}
 
 		#cont {
@@ -22,28 +26,29 @@
 			display: none;
 		}
 
-		#num_cont {
+		#num {
 			width: 40px;
 			height: 40px;
 
 			background: #edebdf;
-			border: 5px solid #e93e30;
+			border: 5px solid #8c8c8c;
 			border-radius: 30px;
 
 			position: absolute;
 			right: -10px;
 			bottom: 10px;
-		}
-
-		#num_cont #num {
-			position: absolute;
-			top: 2px;
-			left: 13px;
-
-			margin: 0;
-			padding: 0;
 
 			font-size: 30px;
+
+			vertical-align: middle;
+			line-height: 40px;
+			padding: 0;
+			text-align: center;
+			font-weight: bold;
+		}
+
+		#num.many {
+			font-size: 25px;
 		}
 	</style>
 </head>
@@ -52,8 +57,7 @@
 	<div id="cont" class="no-unread">
 		<img id="logo" src="gmail-icon.png" />
 
-		<div id="num_cont">
-			<h3 id="num">0</h3>
+		<div id="num">
 		</div>
 	</div>
 

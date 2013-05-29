@@ -3,7 +3,14 @@ function update() {
 
 	$.get('https://mail.google.com/mail/feed/atom', function(data) {
 		$feed = $(data);
-		num_unread = $feed.find('entry').length;
+		num_unread = $feed.find('fullcount').text();
+
+		if (num_unread >= 100) {
+			$('#num').addClass('many');
+		}
+		else {
+			$('#num').removeClass('many');
+		}
 
 		if (num_unread > 0) {
 			$('#cont').removeClass('no-unread').addClass('unread');
