@@ -3,7 +3,7 @@ function update() {
 
 	$.get('https://mail.google.com/mail/feed/atom', function(data) {
 		$feed = $(data);
-		num_unread = $feed.find('fullcount').text();
+		num_unread = parseInt($feed.find('fullcount').text());
 
 		if (num_unread >= 100) {
 			$('#num').addClass('many');
