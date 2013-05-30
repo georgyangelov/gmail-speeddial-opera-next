@@ -16,6 +16,11 @@
 
 		#cont {
 			position: relative;
+			top: -15px;
+		}
+
+		.no-unread #cont {
+			top: 0;
 		}
 
 		#logo {
@@ -50,15 +55,48 @@
 		#num.many {
 			font-size: 23px;
 		}
+
+		#notifications {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+
+			width: 100%;
+			height: 25px;
+
+			background: -webkit-radial-gradient(center, ellipse cover, #eeeeee 60%,#e0e0e0 100%);
+			text-shadow: 1px 1px 1px white;
+
+			text-align: center;
+			line-height: 25px;
+
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+
+			font-size: 12px;
+
+			box-sizing: border-box;
+			padding-left: 2px;
+			padding-right: 2px;
+		}
+
+		.no-unread #notifications {
+			display: none;
+		}
 	</style>
 </head>
 
-<body>
-	<div id="cont" class="no-unread">
+<body class="no-unread">
+	<div id="cont">
 		<img id="logo" src="gmail-icon.png" />
 
 		<div id="num">
 		</div>
+	</div>
+
+	<div id="notifications">
+		No new messages
 	</div>
 
 	<script src="zepto.min.js"></script>

@@ -13,12 +13,15 @@ function update() {
 		}
 
 		if (num_unread > 0) {
-			$('#cont').removeClass('no-unread').addClass('unread');
+			first_text = $feed.find('entry > title').first().text();
+			$('#notifications').text(first_text);
+
+			$('body').removeClass('no-unread').addClass('unread');
 
 			$num.text(num_unread);
 		}
 		else {
-			$('#cont').removeClass('unread').addClass('no-unread');
+			$('body').removeClass('unread').addClass('no-unread');
 		}
 	});
 
