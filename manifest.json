@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
-  "version": "0.3",
-  "name": "Speed Dial for GMail",
+  "version": "0.3.2",
+  "name": "Speed Dial for Gmail",
 
   "permissions": ["speeddial", "https://mail.google.com/"],
   "background": {"page": "speeddial.html"},
   "speeddial": {
-    "title": "GMail",
+    "title": "Gmail",
     "url": "https://mail.google.com"
   },
   "icons": {
